@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    background: #efefef;
+}
+
+h3 {
+    min-height: 22px;
+}
+
+.content {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+section {
+    padding: 15px 30px;
+}
+
+section h2 span {
+    font-weight: 100;
+}
+
+section#depenses {
+    background: rgb(255, 239, 239);
+}
+section#recettes {
+    background: rgb(239, 255, 240);
+}
+section#epargne {
+    background: rgb(246, 239, 255);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row > .column {
+    flex: 1;
+}
+
+.row > .column-2 {
+    flex: 2;
+}
+
+.row > .column-3 {
+    flex: 3;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+.field label {
+    display: block;
+}
+
+.field label::first-letter {
+    text-transform: capitalize;
+}
+
+.required-star {
+    color: red;
+}
+
+input {
+    text-align: right;
+    font-size: 16px;
+    max-width: 100px;
+}
+
+#message {
+    font-size: 16px;
+    padding: 30px;
+}
+
+#message.positive {
+    color: green;
+}
+
+#message.neutral {
+    color: orange;
+}
+
+#message.negative {
+    color: red;
+}

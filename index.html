@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Budget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Budget</h1>
+
+    <div class="content row">
+
+        <section class="column-2" id="depenses">
+            <h2>Dépenses <span class="total"></span></h2>
+            <div class="row">
+                <div class="column">
+                    <h3>Fixes</h3>
+                    <div class="field">
+                        <label for="input-loyer-et-charges">loyer et charges <span class="required-star">*</span></label>
+                        <input id="input-loyer-et-charges" type="number" placeholder="0,00" required value="600"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-remboursement-de-credits">remboursement de crédits</label>
+                        <input id="input-remboursement-de-credits" type="number" placeholder="0,00" value="150"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-eau-electricite-gaz">eau/électricité/gaz <span class="required-star">*</span></label>
+                        <input id="input-eau-electricite-gaz" type="number" placeholder="0,00" required value="150"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-telephone-internet">téléphone - internet <span class="required-star">*</span></label>
+                        <input id="input-telephone-internet" type="number" placeholder="0,00" required value="39.99"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-assurance-habitation">assurance habitation</label>
+                        <input id="input-assurance-habitation" type="number" placeholder="0,00" value="21.78"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-assurance-vehicules">assurance véhicules</label>
+                        <input id="input-assurance-vehicules" type="number" placeholder="0,00" value="86.54"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-mutuelle-sante">mutuelle santé</label>
+                        <input id="input-mutuelle-sante" type="number" placeholder="0,00" value="29.90"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-frais-de-garde">frais de garde</label>
+                        <input id="input-frais-de-garde" type="number" placeholder="0,00"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-impots-sur-le-revenu">impôts sur le revenu</label>
+                        <input id="input-impots-sur-le-revenu" type="number" placeholder="0,00" value="51,27"> €
+                    </div>
+                    <div class="field">
+                        <label for="input-impots-locaux">impôts locaux</label>
+                        <input id="input-impots-locaux" type="number" placeholder="0,00"> €
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Courantes</h3>
+                    <div class="field">
+                        <label for="input-courses">courses</label>
+                        <input id="input-courses" type="number" multiply="4" placeholder="0,00" value="100"> €/semaine
+                    </div>
+                    <div class="field">
+                        <label for="input-essence">essence/frais de transport en commun</label>
+                        <input id="input-essence" type="number" multiply="4" placeholder="0,00" value="40"> €/semaine
+                    </div>
+                    <div class="field">
+                        <label for="input-sport-et-culturel">activités sportives et culturelles</label>
+                        <input id="input-sport-et-culturel" type="number" multiply="0.08333" placeholder="0,00"> €/an
+                    </div>
+                
+                    <h3>Occasionnelles</h3>
+                    <div class="field">
+                        <label for="input-sorties">sorties</label>
+                        <input id="input-sorties" type="number" multiply="4" placeholder="0,00" value="30"> €/semaine
+                    </div>
+                
+                    <h3>Autres <button id="add-depense-button">+</button></h3>
+                    <div id="other-depenses-wrapper"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="column" id="recettes">
+            <h2>Recettes <span class="total"></span></h2>
+            <h3></h3>
+            <div class="field">
+                <label for="input-salaire">salaire</label>
+                <input id="input-salaire" type="number" placeholder="0,00" value="1870.53"> €
+            </div>
+            <div class="field">
+                <label for="input-aides">aides (allocations, etc)</label>
+                <input id="input-aides" type="number" placeholder="0,00"> €
+            </div>
+            <div class="field">
+                <label for="input-rentes">rentes</label>
+                <input id="input-rentes" type="number" placeholder="0,00"> €
+            </div>
+            <h3>Autres <button id="add-recette-button">+</button></h3>
+            <div id="other-recettes-wrapper"></div>
+        </section>
+
+        <section class="column" id="epargne">
+            <h2>Epargne <span class="total"></span></h2>
+            <h3></h3>
+            <div class="field">
+                <label for="input-epargne">Livret A</label>
+                <input id="input-epargne" type="number" placeholder="0,00" value="50"> €
+            </div>
+        </section>
+
+        <section class="column-2" id="result">
+            <h2>Result <span class="total"></span></h2>
+            <h3></h3>
+            <button id="refresh">Rafraichir</button>
+            <button id="reset">Réinitialiser</button>
+            <h3 id="message"></h3>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
